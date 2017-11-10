@@ -24,8 +24,8 @@ Usage
 
 1. Install
     ```bash
-    git clone 
-    cd 
+    git clone https://github.com/o-hayato/sample_jersey_with_CDATA.git
+    cd sample_jersey_with_CDATA/
     ```
 
 2. Run sample code
