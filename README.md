@@ -1,0 +1,1 @@
+sample_jersey_with_CDATA
