@@ -1,31 +1,23 @@
 package com.cdata.sample;
 
 import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
-@XmlRootElement
+@XmlRootElement(name = "SampleResponse")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SampleRes {
 
-        @XmlJavaTypeAdapter(AdapterCDATA.class)
-        private String cdataName;
+    @XmlElementWrapper(name = "sampleSet")
+    @XmlElement(name = "item")
+    private List<SampleItem> sampleItemList;
 
-        private String name;
+    public void setSampleItemList(List<SampleItem> sampleItemList) {
+        this.sampleItemList = new ArrayList<>(sampleItemList);
+    }
 
-        public String getCdataName() {
-                return cdataName;
-        }
-
-        public void setCdataName(String cdataName) {
-                this.cdataName = cdataName;
-        }
-
-        public String getName() {
-                return name;
-        }
-
-        public void setName(String name) {
-                this.name = name;
-        }
+    public List<SampleItem> getSampleItemList() {
+        return new ArrayList<>(sampleItemList);
+    }
 
 }
