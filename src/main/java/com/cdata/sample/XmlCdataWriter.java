@@ -3,6 +3,7 @@ package com.cdata.sample;
 import javax.inject.Singleton;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.ProcessingException;
+import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
@@ -20,7 +21,7 @@ import java.lang.reflect.Type;
 
 @Provider
 @Singleton
-@Consumes(MediaType.APPLICATION_XML)
+@Produces(value = MediaType.APPLICATION_XML)
 public class XmlCdataWriter implements MessageBodyWriter {
 
         @Override
